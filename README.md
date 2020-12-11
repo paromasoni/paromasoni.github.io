@@ -2,4 +2,4 @@ People from Time magazine's 100 Most Influential List between 2004-2020 mapped b
 
 View the map here:
 
-<a=href>paromasoni.github.io</a=href>
+(paromasoni.github.io)[paromasoni.github.io]
