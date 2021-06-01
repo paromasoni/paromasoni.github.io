@@ -138,6 +138,7 @@ sub-font
 
 .label {
     font-size: 1.25rem;
+    color: crimson;
     line-height: 1.25;
     margin-top: 2rem;
     margin-bottom: 0.5rem;
@@ -146,6 +147,7 @@ sub-font
 
 .label-text, .label + p {
     font-size: 1.25rem;
+    color: crimson;
     line-height: 1.25;
     margin-bottom: 0.5rem;
     font-weight: 400;
