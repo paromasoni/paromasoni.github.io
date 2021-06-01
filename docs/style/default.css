@@ -33,7 +33,7 @@ ul.spread {
     background-color: #181414;
     color: #fcfbfb;   
 }
-/*
+
 .light-theme {
     background-color: white;
     color: black;    
@@ -42,7 +42,7 @@ ul.spread {
 .beige-theme {
     background-color: #f9f1e6;
     color: black;    
-} */
+}
 
 img {
     max-width: 100%;
@@ -73,7 +73,7 @@ sub-font
 
 
 .super-font, h1, h2, h3, .label + p {
-    font-family: 'Avenir', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
 .sub-font, p, ul, li {
@@ -146,7 +146,6 @@ sub-font
 
 .label-text, .label + p {
     font-size: 1.25rem;
-    color:crimson;
     line-height: 1.25;
     margin-bottom: 0.5rem;
     font-weight: 400;
