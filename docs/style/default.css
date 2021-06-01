@@ -20,7 +20,7 @@ ul.spread {
     padding-left: 0;
     color: crimson;
     text-align: center;
-    margin-bottom: 0;
+    margin-bottom: 0.1;
 }
 
 .fake-table > div > div, ul.spread li {
