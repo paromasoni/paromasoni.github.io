@@ -33,7 +33,7 @@ ul.spread {
     background-color: #181414;
     color: #fcfbfb;   
 }
-
+/*
 .light-theme {
     background-color: white;
     color: black;    
@@ -42,7 +42,7 @@ ul.spread {
 .beige-theme {
     background-color: #f9f1e6;
     color: black;    
-}
+} */
 
 img {
     max-width: 100%;
@@ -73,7 +73,7 @@ sub-font
 
 
 .super-font, h1, h2, h3, .label + p {
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Avenir', sans-serif;
 }
 
 .sub-font, p, ul, li {
