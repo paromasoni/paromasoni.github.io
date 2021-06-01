@@ -18,6 +18,7 @@ body {
 
 ul.spread {
     padding-left: 0;
+    color: crimson;
     text-align: center;
     margin-bottom: 0;
 }
@@ -34,7 +35,7 @@ ul.spread {
     color: #fcfbfb;   
 }
 
-.light-theme {
+/*.light-theme {
     background-color: white;
     color: black;    
 }
@@ -42,7 +43,7 @@ ul.spread {
 .beige-theme {
     background-color: #f9f1e6;
     color: black;    
-}
+}*/
 
 img {
     max-width: 100%;
@@ -73,11 +74,11 @@ sub-font
 
 
 .super-font, h1, h2, h3, .label + p {
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Avenir', sans-serif;
 }
 
 .sub-font, p, ul, li {
-    font-family: 'Lora', serif;
+    font-family: 'Avenir Light', sans-serif;
 }
 
 .headline, h1 {
