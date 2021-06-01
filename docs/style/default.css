@@ -18,9 +18,8 @@ body {
 
 ul.spread {
     padding-left: 0;
-    color: crimson;
     text-align: center;
-    margin-bottom: 0.1;
+    margin-bottom: 0;
 }
 
 .fake-table > div > div, ul.spread li {
@@ -35,7 +34,7 @@ ul.spread {
     color: #fcfbfb;   
 }
 
-/*.light-theme {
+.light-theme {
     background-color: white;
     color: black;    
 }
@@ -43,7 +42,7 @@ ul.spread {
 .beige-theme {
     background-color: #f9f1e6;
     color: black;    
-}*/
+}
 
 img {
     max-width: 100%;
@@ -74,11 +73,11 @@ sub-font
 
 
 .super-font, h1, h2, h3, .label + p {
-    font-family: 'Avenir', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
 .sub-font, p, ul, li {
-    font-family: 'Avenir Light', sans-serif;
+    font-family: 'Lora', serif;
 }
 
 .headline, h1 {
