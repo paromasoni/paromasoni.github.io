@@ -12,7 +12,8 @@ pages:
     title: The rise in public assistance denials in New York City
     slug: pa-denials
     url: https://docs.google.com/document/d/1rVE89CpYjOKjVb3P_nkViCM9Jt56o0b8OcIWmOyw2Nw/
-  - type: html
+  - type: html_bootstrap
     title: Can plot summaries determine movie ratings?
     slug: plot-summaries-ratings
+    filepath: portfolio_repo/docs/plot-summaries-ratings/index.html
     
