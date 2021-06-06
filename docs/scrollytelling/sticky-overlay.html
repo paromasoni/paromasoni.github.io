@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Trying out basic scrollytelling</title>
+    <meta name="description" content="Trying out basic scrollytelling" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+
+      #scrolly {
+        position: relative;
+        background-color: #f3f3f3;
+        padding: 1rem;
+    
+      }
+
+      article {
+        position: sticky;
+        padding: auto;
+        max-width: 20rem;
+        margin: 0 auto;
+        margin-left:5rem;
+      }
+
+      .sticky-thing {
+        position: -webkit-sticky;
+        position: sticky;
+        left: 0;
+        width: 100%;
+        margin: 0;
+        background-image: url('images/gallery.png');
+        background-size: cover;
+        background-position: center center;
+
+        z-index: 0;
+        top: 12.5vh;
+        height: 75vh;
+        /* Center everything inside */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .sticky-thing p {
+        font-size: 2rem;
+        font-weight: 800;
+        color: #fff;
+        text-align: right;
+        text-shadow: 5px 4px 7px rgba(5, 21, 27, 0.507);
+        margin-top: 25rem;
+        position: sticky;
+        margin-left: 50rem; 
+        margin-right: 2rem;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      }
+  
+      
+      .step {
+        margin: 0 auto 2rem auto;
+        margin-bottom: 20rem;
+        color: #fff;
+        background-color: rgba(5, 21, 27, 0.5);
+        font-size: 1rem;
+      }
+
+      .step:last-child {
+        margin-bottom: 1;
+      }
+
+      .step.is-active p {
+        background-color: rgba(33, 170, 194, 0.397);
+        color: #eeeded;
+      }
+
+      .step p {
+        text-align: center;
+        padding: 1rem;
+        font-size: 1.10rem;
+        background-color: #08141a7a;
+      }
+
+      #first-step p{
+        font-size:1.5rem;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <nav>
+    
+        <div class="portfolio">
+          <p></p>
+          <a href="https://www.paromasoni.com"> Back to main portfolio</a>
+  
+        </div>
+      </nav>
+      <section id="intro">
+        <h1 class="intro__hed">Trying out basic scrollytelling</h1>
+        <p class="intro__dek">
+          Scroll to see cool pictures!
+        </p>
+      </section>
+
+      <section id="scrolly">
+        <div class="sticky-thing">
+          <p></p>
+        </div>
+
+        <article>
+          <div class="step" data-step="">
+            <section id="first-step">
+              <p>Here are some fun photos from over the years. Full gallery on my portfolio. </p></section>
+          </div>
+
+          <div class="step" data-step="Poás Volcano, Costa Rica", data-image= 'url("images/volcano.png")'>
+            <p>The Poás Volcano, is an active 2,708-metre stratovolcano in central Costa Rica and is located within Poas Volcano National Park. It has erupted 40 times since 1828, including April 2017 when visitors and residents were evacuated. </p>
+          </div>
+
+          <div class="step" data-step="Cozumel, Mexico", data-image='url("images/ocean.png")'>
+            <p>Punta Sur marks the southern point of Cozumel and is part of the Parque Punta Sur, a 247-acre ecological park that covers the reefs, beaches, lagoons, and low forest of the surrounding area. The reef system is among the most beautiful in the world, attracting divers all year round.</p>
+          </div>
+          <div class="step" data-step="Wadi Rum, Jordan", data-image='url("images/sunset.png")'>
+            <p>Wadi Rum is a protected desert wilderness in southern Jordan. It features dramatic sandstone mountains and natural arches. Many prehistoric inscriptions and carvings line rocky caverns and steep chasms. The natural watering hole of Lawrence’s Spring is named after British soldier Lawrence of Arabia, who allegedly washed there.</p>
+          </div>
+          <div class="step" data-step="Budapest, Hungary", data-image='url("images/budapest.png")'>
+            <p>The Széchenyi Chain Bridge is a chain bridge that spans the River Danube between Buda and Pest, the western and eastern sides of Budapest, the capital of Hungary. Built in 1849, it was the first bridge to span this river.</p>
+          </div>
+        </article>
+      </section>
+
+      <section id="outro"></section>
+    </main>
+
+    <!-- <div class='debug'></div> -->
+    <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
+    <script src="https://unpkg.com/scrollama"></script>
+    <script>
+      // DOM _ document object model
+      var main = document.querySelector("main");
+      var scrolly = main.querySelector("#scrolly");
+      var sticky = scrolly.querySelector(".sticky-thing");
+      var article = scrolly.querySelector("article");
+      var steps = article.querySelectorAll(".step");
+
+      // initialize the scrollama
+      var scroller = scrollama();
+
+      // scrollama event handlers
+      function handleStepEnter(response) {
+        // response = { element, direction, index }
+        var el = response.element;
+
+        // remove is-active from all steps
+        // then add is-active to this step
+        steps.forEach(step => step.classList.remove('is-active'));
+        el.classList.add('is-active');
+
+        // update graphic based on step
+        sticky.querySelector("p").innerText = el.dataset.step;
+        //sticky.style.backgroundColor = el.dataset.color;
+        sticky.style.backgroundImage = el.dataset.image;
+        //sticky.style.backgroundImage = 'url("images/volcano.png")'
+       // sticky.querySelector("p").style.fontSize = `${el.dataset.step}rem`
+      }
+
+      function init() {
+        // 2. setup the scroller passing options
+        // 		this will also initialize trigger observations
+        // 3. bind scrollama event handlers (this can be chained like below)
+        scroller
+          .setup({
+            step: "#scrolly article .step",
+            offset: 0.73,
+            debug: false
+          })
+          .onStepEnter(handleStepEnter);
+
+        // setup resize event
+        window.addEventListener("resize", scroller.resize);
+      }
+
+      // kick things off
+      init();
+    </script>
+  </body>
+</html>
