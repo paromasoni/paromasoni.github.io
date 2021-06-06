@@ -66,6 +66,10 @@ nav {
   font-size: 1.1rem;
 }
 
+#first-step p a {
+color: white;
+}
+
 .nav__examples > * {
   margin-right: 0.5rem;
   font-size: 0.5rem;
