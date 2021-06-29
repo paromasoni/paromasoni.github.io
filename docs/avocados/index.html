@@ -1,0 +1,763 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      
+    <style>
+        body {
+            margin:auto;
+            padding:50px 10px;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .serif {
+            font-family: 'Lora', serif;
+        }
+        .sans-serif {
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        /* choose a light or dark theme to add to the body tag. */
+        .dark-theme {
+            background-color: #151515;
+            color: #fbfbfb;
+        }
+        .light-theme {
+            background-color: white;
+            color: black;
+        }
+
+        .header {
+            padding-top:20px;
+            padding-bottom:20px;
+        }
+
+        .story-body, .header, .chart-section, .footer {
+            margin:auto;
+            max-width: 700px;
+        }
+
+        .footer {
+            padding-top:20px;
+            padding-bottom:20px;
+        }
+
+        .chart-section.wide{
+            width:100%;
+            max-width:1200px;
+        }
+
+        .chart-section.wide p.chart-title {
+            width:100%;
+            max-width:700px;
+            margin-left:auto;
+            margin-right:auto;
+        }
+        .chart-section.wide p.chart-subhead {
+            width:100%;
+            max-width:700px;
+            margin-left:auto;
+            margin-right:auto;
+        }
+
+
+        /* text styles */
+
+        p.kicker {
+            font-size:1rem;
+            text-transform:uppercase;
+        }
+
+        .text-center {
+            text-align:center;
+        }
+
+        h1.headline {
+            font-size: 4rem;
+            line-height: 1.1;
+            margin-bottom: 0.25rem;
+            margin-top: 1rem;
+            font-weight: 800;
+        }
+
+        h2.subhead {
+            font-size: 1.4rem;
+            line-height: 2rem;
+            margin-bottom:0;
+            margin-top: 15px;
+            font-weight: 400;
+        }
+
+        p.body-text {
+            font-size: 1.1rem;
+            line-height: 1.4;
+            margin-top:0;
+            margin-bottom:15px;
+        }
+
+        h3.section-head {
+            font-size:2rem;
+            margin:40px 0 10px 0;
+            font-weight:700;
+            line-height:1.3;
+        }
+
+        .byline {
+            font-size: 1.1rem;
+            line-height: 0.75;
+            margin-top: 1.5rem;
+            font-weight: 500;
+        }
+
+        .date {
+            font-size: 0.85rem;
+            line-height: 1;
+            margin-top: 10px;
+            font-weight:400;
+            text-transform:uppercase;
+            letter-spacing:0.5px;
+        }
+
+
+        p.note {
+            font-size:0.85rem;
+        }
+
+        /* chart styles */
+
+        .chart-section {
+            width:100%;
+            max-width:1200px;
+            padding:20px 0px;
+        }
+
+        .story-body .chart-section {
+            padding-top:0px;
+        }
+
+
+        .chart-row {
+            display:flex;
+            justify-content: space-between;
+            margin-top:20px;
+        }
+
+        p.chart-title {
+            font-size:1.3rem;
+            font-weight:700;
+            max-width:700px;
+            margin:0px auto 5px auto;
+        }
+        p.chart-subhead {
+            margin:0 auto;
+            max-width:700px;
+            font-size:1rem;
+            margin-bottom:15px;
+        }
+
+        p.chart-label {
+            margin:0 0 5px 0;
+            font-size:0.85rem;
+            text-transform:uppercase;
+            font-weight:600;
+        }
+
+        .chart-row .chart {
+            width:100%;
+            padding-right:15px;
+            min-width:calc(25% - 15px);
+
+        }
+
+
+
+        p.chart-source {
+            font-size:0.85rem;
+            margin:0;
+        }
+
+
+
+
+
+        /* photos */
+
+        .photo-section {
+            padding:30px 0px;
+            width:100%;
+            margin:auto;
+            display:flex;
+            max-width:1200px;
+        }
+
+        .photo {
+            width:100%;
+            padding-right:15px;
+        }
+        .photo img {
+            width:100%;	
+        }
+
+        p.caption {
+            font-size:0.9rem;
+            margin:0;
+        }
+
+
+
+        /* mobile */
+
+        @media (max-width:700px) {
+
+            .chart-row {
+                display:block;
+            }
+
+            .chart-row .chart {
+                padding:0;
+            }
+
+            .photo-section {
+                display:block;
+            }
+            .photo {
+                padding:0;
+            }
+
+        }
+    </style>
+    <style>
+        /* These are the styles for ai2html */
+        
+        #g-homework-text-laptop, #g-homework-text-medium, #g-homework-text-mobile {
+            display: none;
+        }
+
+        @media (max-width: 490px) {
+            #g-homework-text-mobile {
+                display: block;
+            }
+        }
+
+        @media (min-width: 490px) and (max-width: 620px) {
+            #g-homework-text-laptop {
+                display: block;
+            }
+        }
+
+        @media (min-width: 620px)  {
+            #g-homework-text-medium {
+                display: block;
+            }
+        }
+
+    </style>
+    
+    <!-- google fonts: Open Sans (sans-serif) and Lora (serif) -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700&display=swap" rel="stylesheet">
+      
+    <title>Avocado Production Boom</title>
+  </head>
+
+  <body class="light-theme"> <!-- all of the content on your html page goes inside the body -->
+
+    <div class="header">
+      <p class="kicker">GLOBAL POLITICS</p>
+      <h1 class="headline">The explosion of “green gold” </h1>
+      <h2 class="subhead">How avocado production boomed in Mexico and California in the last few years, setting the stage for precarious environmental conditions in the tropical West.</h2>
+      <p class="byline">By Paroma Soni</p>
+      <p class="date">Published June 28, 2021</p>
+    </div>
+
+    <div class="story-body">
+      <p class="body-text serif">Some people have called avocados the new “blood diamonds” – they require a lot of water to be grown in climates that are otherwise dry and hot, like most of California and increasingly more of Mexico, which is suffering dramatic climate consequences because of clearing the land for avocado harvests. Not only do avocados lead a massive water footprint, specifically in the state of Michoacan in Mexico, they are subject to regulations by drug cartels. </p>
+      
+    </div>
+
+    <div class="chart-section">
+        <div class="chart-row">
+          <div class="chart">
+
+
+
+
+            <!--- PASTE YOUR AI2HTML AFTER THIS LINE -->
+
+
+<!-- Generated by ai2html v0.102.0 - 2021-06-28 20:38 -->
+<!-- ai file: homework-text.ai -->
+<style media="screen,print">
+	#g-homework-text-box ,
+	#g-homework-text-box .g-artboard {
+		margin:0 auto;
+	}
+	#g-homework-text-box p {
+		margin:0;
+	}
+	#g-homework-text-box .g-aiAbs {
+		position:absolute;
+	}
+	#g-homework-text-box .g-aiImg {
+		position:absolute;
+		top:0;
+		display:block;
+		width:100% !important;
+	}
+	#g-homework-text-box .g-aiSymbol {
+		position: absolute;
+		box-sizing: border-box;
+	}
+	#g-homework-text-box .g-aiPointText p { white-space: nowrap; }
+	#g-homework-text-medium {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-homework-text-medium p {
+		font-weight:500;
+		line-height:11px;
+		height:auto;
+		filter:alpha(opacity=100);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+		opacity:1;
+		letter-spacing:0em;
+		font-size:9px;
+		text-align:left;
+		color:rgb(170,170,170);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-homework-text-medium .g-pstyle0 {
+		line-height:25px;
+		height:25px;
+		font-size:21px;
+		color:rgb(0,0,0);
+	}
+	#g-homework-text-medium .g-pstyle1 {
+		line-height:14px;
+		height:14px;
+		font-size:12px;
+	}
+	#g-homework-text-medium .g-pstyle2 {
+		line-height:14px;
+		height:14px;
+		font-size:12px;
+		color:rgb(36,37,38);
+	}
+	#g-homework-text-medium .g-pstyle3 {
+		height:11px;
+	}
+	#g-homework-text-medium .g-pstyle4 {
+		line-height:13px;
+		height:13px;
+		font-size:11px;
+	}
+	#g-homework-text-medium .g-pstyle5 {
+		line-height:15px;
+		height:15px;
+		font-size:13px;
+	}
+	#g-homework-text-laptop {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-homework-text-laptop p {
+		font-weight:500;
+		line-height:9px;
+		height:auto;
+		filter:alpha(opacity=100);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+		opacity:1;
+		letter-spacing:0em;
+		font-size:7px;
+		text-align:left;
+		color:rgb(170,170,170);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-homework-text-laptop .g-pstyle0 {
+		line-height:23px;
+		height:23px;
+		font-size:19px;
+		color:rgb(0,0,0);
+	}
+	#g-homework-text-laptop .g-pstyle1 {
+		height:9px;
+		font-size:8px;
+	}
+	#g-homework-text-laptop .g-pstyle2 {
+		line-height:10px;
+		height:10px;
+		font-size:8px;
+		color:rgb(36,37,38);
+	}
+	#g-homework-text-laptop .g-pstyle3 {
+		height:9px;
+	}
+	#g-homework-text-laptop .g-pstyle4 {
+		line-height:11px;
+		height:11px;
+		font-size:9px;
+	}
+	#g-homework-text-laptop .g-pstyle5 {
+		line-height:12px;
+		height:12px;
+		font-size:10px;
+	}
+	#g-homework-text-mobile {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-homework-text-mobile p {
+		font-weight:500;
+		line-height:7px;
+		height:auto;
+		filter:alpha(opacity=100);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+		opacity:1;
+		letter-spacing:0em;
+		font-size:5px;
+		text-align:left;
+		color:rgb(170,170,170);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-homework-text-mobile .g-pstyle0 {
+		line-height:17px;
+		height:17px;
+		font-size:15px;
+		color:rgb(0,0,0);
+	}
+	#g-homework-text-mobile .g-pstyle1 {
+		height:7px;
+		font-size:6px;
+	}
+	#g-homework-text-mobile .g-pstyle2 {
+		height:7px;
+	}
+	#g-homework-text-mobile .g-pstyle3 {
+		line-height:9px;
+		height:9px;
+		font-size:8px;
+	}
+
+</style>
+
+<div id="g-homework-text-box" class="ai2html">
+
+	<!-- Artboard: medium -->
+	<div id="g-homework-text-medium" class="g-artboard" style="width:620px; height:425px;" data-aspect-ratio="1.459" data-min-width="620">
+<div style=""></div>
+		<img id="g-homework-text-medium-img" class="g-aiImg" alt="" src="homework-text-medium.jpg"/>
+		<div id="g-ai0-1" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:8.5321%;margin-top:-15.3px;left:6.3156%;width:397px;">
+			<p class="g-pstyle0">Avocado Production from 2018 to 2020</p>
+		</div>
+		<div id="g-ai0-2" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:14.5689%;margin-top:-7.9px;left:18.1738%;width:70px;">
+			<p class="g-pstyle1">California</p>
+		</div>
+		<div id="g-ai0-3" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:14.5689%;margin-top:-7.9px;left:9.3787%;width:56px;">
+			<p class="g-pstyle1">Mexico</p>
+		</div>
+		<div id="g-ai0-4" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:14.8042%;margin-top:-7.9px;left:29.1246%;width:47px;">
+			<p class="g-pstyle1">Chile</p>
+		</div>
+		<div id="g-ai0-5" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:14.8042%;margin-top:-7.9px;left:36.6188%;width:45px;">
+			<p class="g-pstyle1">Peru</p>
+		</div>
+		<div id="g-ai0-6" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:21.016%;margin-top:-22.3px;left:68.3872%;width:173px;">
+			<p class="g-pstyle2">In 2020, Mexico produced a </p>
+			<p class="g-pstyle2">record-breaking 2.3 billion </p>
+			<p class="g-pstyle2">avocados, distributed globally.</p>
+		</div>
+		<div id="g-ai0-7" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:22.142%;margin-top:-6.1px;left:3.8202%;width:58px;">
+			<p class="g-pstyle3">2.4 billion</p>
+		</div>
+		<div id="g-ai0-8" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:27.845%;margin-top:-7.3px;left:43.9055%;width:55px;">
+			<p class="g-pstyle4">2.14 bn</p>
+		</div>
+		<div id="g-ai0-9" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:27.7891%;margin-top:-6.1px;left:3.8202%;width:58px;">
+			<p class="g-pstyle3">2.2 billion</p>
+		</div>
+		<div id="g-ai0-10" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:32.0803%;margin-top:-7.3px;left:14.8099%;width:55px;">
+			<p class="g-pstyle4">1.98 bn</p>
+		</div>
+		<div id="g-ai0-11" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:33.4361%;margin-top:-6.1px;left:3.8202%;width:58px;">
+			<p class="g-pstyle3">2.0 billion</p>
+		</div>
+		<div id="g-ai0-12" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:39.0832%;margin-top:-6.1px;left:3.8202%;width:58px;">
+			<p class="g-pstyle3">1.8 billion</p>
+		</div>
+		<div id="g-ai0-13" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:44.7302%;margin-top:-6.1px;left:3.8202%;width:58px;">
+			<p class="g-pstyle3">1.6 billion</p>
+		</div>
+		<div id="g-ai0-14" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:50.3773%;margin-top:-6.1px;left:3.8202%;width:58px;">
+			<p class="g-pstyle3">1.4 billion</p>
+		</div>
+		<div id="g-ai0-15" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:56.0244%;margin-top:-6.1px;left:3.8202%;width:58px;">
+			<p class="g-pstyle3">1.2 billion</p>
+		</div>
+		<div id="g-ai0-16" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:61.4361%;margin-top:-6.1px;left:3.8202%;width:58px;">
+			<p class="g-pstyle3">1.0 billion</p>
+		</div>
+		<div id="g-ai0-17" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:67.0832%;margin-top:-6.1px;left:2.769%;width:62px;">
+			<p class="g-pstyle3">800 million</p>
+		</div>
+		<div id="g-ai0-18" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:72.7302%;margin-top:-6.1px;left:2.769%;width:62px;">
+			<p class="g-pstyle3">600 million</p>
+		</div>
+		<div id="g-ai0-19" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:77.4921%;margin-top:-7.3px;left:79.7083%;width:47px;">
+			<p class="g-pstyle4">368m</p>
+		</div>
+		<div id="g-ai0-20" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:78.3773%;margin-top:-6.1px;left:2.769%;width:62px;">
+			<p class="g-pstyle3">400 million</p>
+		</div>
+		<div id="g-ai0-21" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:79.6097%;margin-top:-7.3px;left:21.018%;width:47px;">
+			<p class="g-pstyle4">312m</p>
+		</div>
+		<div id="g-ai0-22" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:82.4332%;margin-top:-7.3px;left:50.7189%;width:47px;">
+			<p class="g-pstyle4">203m</p>
+		</div>
+		<div id="g-ai0-23" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:82.6685%;margin-top:-7.3px;left:61.4825%;width:47px;">
+			<p class="g-pstyle4">183m</p>
+		</div>
+		<div id="g-ai0-24" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:82.6685%;margin-top:-7.3px;left:32.2889%;width:47px;">
+			<p class="g-pstyle4">181m</p>
+		</div>
+		<div id="g-ai0-25" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:83.3744%;margin-top:-7.3px;left:90.676%;width:47px;">
+			<p class="g-pstyle4">171m</p>
+		</div>
+		<div id="g-ai0-26" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:84.0244%;margin-top:-6.1px;left:2.769%;width:62px;">
+			<p class="g-pstyle3">200 million</p>
+		</div>
+		<div id="g-ai0-27" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:86.198%;margin-top:-7.3px;left:27.0092%;width:42px;">
+			<p class="g-pstyle4">58m</p>
+		</div>
+		<div id="g-ai0-28" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:87.6097%;margin-top:-7.3px;left:56.1598%;width:42px;">
+			<p class="g-pstyle4">32m</p>
+		</div>
+		<div id="g-ai0-29" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:88.3156%;margin-top:-7.3px;left:84.8695%;width:44px;">
+			<p class="g-pstyle4">2.6m</p>
+		</div>
+		<div id="g-ai0-30" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:89.6714%;margin-top:-6.1px;left:9.04%;width:26px;">
+			<p class="g-pstyle3">0</p>
+		</div>
+		<div id="g-ai0-31" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:94.9931%;margin-top:-15.7px;left:52.5018%;width:47px;">
+			<p class="g-pstyle5">2019</p>
+		</div>
+		<div id="g-ai0-32" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:93.2267%;margin-top:-8.2px;left:82.8691%;width:47px;">
+			<p class="g-pstyle5">2020</p>
+		</div>
+		<div id="g-ai0-33" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:93.462%;margin-top:-8.2px;left:22.8919%;width:47px;">
+			<p class="g-pstyle5">2018</p>
+		</div>
+	</div>
+
+	<!-- Artboard: laptop -->
+	<div id="g-homework-text-laptop" class="g-artboard" style="width:490px; height:350px;" data-aspect-ratio="1.4" data-min-width="490" data-max-width="619">
+<div style=""></div>
+		<img id="g-homework-text-laptop-img" class="g-aiImg" alt="" src="homework-text-laptop.jpg"/>
+		<div id="g-ai1-1" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:8.0769%;margin-top:-14.3px;left:10.0741%;width:369px;">
+			<p class="g-pstyle0">Avocado Production from 2018 to 2020</p>
+		</div>
+		<div id="g-ai1-2" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:14.5349%;margin-top:-4.9px;left:13.3947%;width:43px;">
+			<p class="g-pstyle1">Mexico</p>
+		</div>
+		<div id="g-ai1-3" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:14.5349%;margin-top:-4.9px;left:22.9293%;width:52px;">
+			<p class="g-pstyle1">California</p>
+		</div>
+		<div id="g-ai1-4" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:14.8206%;margin-top:-4.9px;left:41.3506%;width:36px;">
+			<p class="g-pstyle1">Peru</p>
+		</div>
+		<div id="g-ai1-5" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:14.8206%;margin-top:-4.9px;left:33.5762%;width:38px;">
+			<p class="g-pstyle1">Chile</p>
+		</div>
+		<div id="g-ai1-6" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:19.47%;margin-top:-15.1px;left:75.0937%;width:122px;">
+			<p class="g-pstyle2">In 2020, Mexico produced a </p>
+			<p class="g-pstyle2">record-breaking 2.3 billion </p>
+			<p class="g-pstyle2">avocados, distributed globally.</p>
+		</div>
+		<div id="g-ai1-7" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:20.3411%;margin-top:-5.2px;left:3.705%;width:51px;">
+			<p class="g-pstyle3">2.4 billion</p>
+		</div>
+		<div id="g-ai1-8" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:25.1724%;margin-top:-6.1px;left:45.3414%;width:48px;">
+			<p class="g-pstyle4">2.14 bn</p>
+		</div>
+		<div id="g-ai1-9" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:26.0554%;margin-top:-5.2px;left:3.705%;width:51px;">
+			<p class="g-pstyle3">2.2 billion</p>
+		</div>
+		<div id="g-ai1-10" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:28.8867%;margin-top:-6.1px;left:15.2613%;width:48px;">
+			<p class="g-pstyle4">1.98 bn</p>
+		</div>
+		<div id="g-ai1-11" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:31.7697%;margin-top:-5.2px;left:3.705%;width:51px;">
+			<p class="g-pstyle3">2.0 billion</p>
+		</div>
+		<div id="g-ai1-12" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:37.1982%;margin-top:-5.2px;left:3.705%;width:51px;">
+			<p class="g-pstyle3">1.8 billion</p>
+		</div>
+		<div id="g-ai1-13" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:42.9125%;margin-top:-5.2px;left:3.705%;width:51px;">
+			<p class="g-pstyle3">1.6 billion</p>
+		</div>
+		<div id="g-ai1-14" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:48.6268%;margin-top:-5.2px;left:3.705%;width:51px;">
+			<p class="g-pstyle3">1.4 billion</p>
+		</div>
+		<div id="g-ai1-15" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:54.0554%;margin-top:-5.2px;left:3.705%;width:51px;">
+			<p class="g-pstyle3">1.2 billion</p>
+		</div>
+		<div id="g-ai1-16" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:59.7697%;margin-top:-5.2px;left:3.705%;width:51px;">
+			<p class="g-pstyle3">1.0 billion</p>
+		</div>
+		<div id="g-ai1-17" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:65.484%;margin-top:-5.2px;left:2.6122%;width:55px;">
+			<p class="g-pstyle3">800 million</p>
+		</div>
+		<div id="g-ai1-18" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:71.1982%;margin-top:-5.2px;left:2.6122%;width:55px;">
+			<p class="g-pstyle3">600 million</p>
+		</div>
+		<div id="g-ai1-19" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:75.1724%;margin-top:-6.1px;left:80.847%;width:42px;">
+			<p class="g-pstyle4">368m</p>
+		</div>
+		<div id="g-ai1-20" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:76.6268%;margin-top:-5.2px;left:2.6122%;width:55px;">
+			<p class="g-pstyle3">400 million</p>
+		</div>
+		<div id="g-ai1-21" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:77.4581%;margin-top:-6.1px;left:20.4634%;width:42px;">
+			<p class="g-pstyle4">312m</p>
+		</div>
+		<div id="g-ai1-22" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:79.1724%;margin-top:-6.1px;left:50.6971%;width:42px;">
+			<p class="g-pstyle4">203m</p>
+		</div>
+		<div id="g-ai1-23" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:80.8867%;margin-top:-6.1px;left:61.8674%;width:42px;">
+			<p class="g-pstyle4">183m</p>
+		</div>
+		<div id="g-ai1-24" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:80.8867%;margin-top:-6.1px;left:31.8674%;width:42px;">
+			<p class="g-pstyle4">181m</p>
+		</div>
+		<div id="g-ai1-25" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:80.8867%;margin-top:-6.1px;left:91.6633%;width:42px;">
+			<p class="g-pstyle4">171m</p>
+		</div>
+		<div id="g-ai1-26" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:82.3411%;margin-top:-5.2px;left:2.6122%;width:55px;">
+			<p class="g-pstyle3">200 million</p>
+		</div>
+		<div id="g-ai1-27" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:84.601%;margin-top:-6.1px;left:26.6155%;width:38px;">
+			<p class="g-pstyle4">58m</p>
+		</div>
+		<div id="g-ai1-28" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:85.4581%;margin-top:-6.1px;left:56.1531%;width:38px;">
+			<p class="g-pstyle4">32m</p>
+		</div>
+		<div id="g-ai1-29" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:86.601%;margin-top:-6.1px;left:85.3368%;width:40px;">
+			<p class="g-pstyle4">2.6m</p>
+		</div>
+		<div id="g-ai1-30" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:88.0554%;margin-top:-5.2px;left:9.1331%;width:26px;">
+			<p class="g-pstyle3">0</p>
+		</div>
+		<div id="g-ai1-31" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:93.1709%;margin-top:-13.1px;left:52.8282%;width:42px;">
+			<p class="g-pstyle5">2019</p>
+		</div>
+		<div id="g-ai1-32" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:91.4081%;margin-top:-6.9px;left:83.53%;width:42px;">
+			<p class="g-pstyle5">2020</p>
+		</div>
+		<div id="g-ai1-33" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:91.6938%;margin-top:-6.9px;left:22.8926%;width:42px;">
+			<p class="g-pstyle5">2018</p>
+		</div>
+	</div>
+
+	<!-- Artboard: mobile -->
+	<div id="g-homework-text-mobile" class="g-artboard" style="max-width: 375px;max-height: 266px" data-aspect-ratio="1.411" data-min-width="0" data-max-width="489">
+<div style="padding: 0 0 70.88% 0;"></div>
+		<img id="g-homework-text-mobile-img" class="g-aiImg" alt="" src="homework-text-mobile.jpg"/>
+		<div id="g-ai2-1" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:6.8492%;margin-top:-10.2px;left:10.3268%;width:282px;">
+			<p class="g-pstyle0">Avocado Production from 2018 to 2020</p>
+		</div>
+		<div id="g-ai2-2" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:13.4614%;margin-top:-3.8px;left:13.5823%;width:38px;">
+			<p class="g-pstyle1">Mexico</p>
+		</div>
+		<div id="g-ai2-3" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:13.4614%;margin-top:-3.8px;left:22.9294%;width:45px;">
+			<p class="g-pstyle1">California</p>
+		</div>
+		<div id="g-ai2-4" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:13.8376%;margin-top:-3.8px;left:40.9891%;width:33px;">
+			<p class="g-pstyle1">Peru</p>
+		</div>
+		<div id="g-ai2-5" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:13.8376%;margin-top:-3.8px;left:33.3674%;width:34px;">
+			<p class="g-pstyle1">Chile</p>
+		</div>
+		<div id="g-ai2-6" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:20.3711%;margin-top:-4.1px;left:2.4828%;width:44px;">
+			<p class="g-pstyle2">2.4 billion</p>
+		</div>
+		<div id="g-ai2-7" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:26.0145%;margin-top:-4.1px;left:2.4828%;width:44px;">
+			<p class="g-pstyle2">2.2 billion</p>
+		</div>
+		<div id="g-ai2-8" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:31.6578%;margin-top:-4.1px;left:2.4828%;width:44px;">
+			<p class="g-pstyle2">2.0 billion</p>
+		</div>
+		<div id="g-ai2-9" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:36.9249%;margin-top:-4.1px;left:2.4828%;width:44px;">
+			<p class="g-pstyle2">1.8 billion</p>
+		</div>
+		<div id="g-ai2-10" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:42.5683%;margin-top:-4.1px;left:2.4828%;width:44px;">
+			<p class="g-pstyle2">1.6 billion</p>
+		</div>
+		<div id="g-ai2-11" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:48.2116%;margin-top:-4.1px;left:2.4828%;width:44px;">
+			<p class="g-pstyle2">1.4 billion</p>
+		</div>
+		<div id="g-ai2-12" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:53.855%;margin-top:-4.1px;left:2.4828%;width:44px;">
+			<p class="g-pstyle2">1.2 billion</p>
+		</div>
+		<div id="g-ai2-13" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:59.1221%;margin-top:-4.1px;left:2.4828%;width:44px;">
+			<p class="g-pstyle2">1.0 billion</p>
+		</div>
+		<div id="g-ai2-14" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:64.7654%;margin-top:-4.1px;left:1.4115%;width:47px;">
+			<p class="g-pstyle2">800 million</p>
+		</div>
+		<div id="g-ai2-15" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:70.4088%;margin-top:-4.1px;left:1.4115%;width:47px;">
+			<p class="g-pstyle2">600 million</p>
+		</div>
+		<div id="g-ai2-16" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:76.0521%;margin-top:-4.1px;left:1.4115%;width:47px;">
+			<p class="g-pstyle2">400 million</p>
+		</div>
+		<div id="g-ai2-17" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:81.6954%;margin-top:-4.1px;left:1.4115%;width:47px;">
+			<p class="g-pstyle2">200 million</p>
+		</div>
+		<div id="g-ai2-18" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:86.9626%;margin-top:-4.1px;left:7.8044%;width:25px;">
+			<p class="g-pstyle2">0</p>
+		</div>
+		<div id="g-ai2-19" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:92.3915%;margin-top:-9.6px;left:50.6411%;width:37px;">
+			<p class="g-pstyle3">2019</p>
+		</div>
+		<div id="g-ai2-20" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:90.65%;margin-top:-4.9px;left:80.7398%;width:37px;">
+			<p class="g-pstyle3">2020</p>
+		</div>
+		<div id="g-ai2-21" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:90.65%;margin-top:-4.9px;left:21.2935%;width:37px;">
+			<p class="g-pstyle3">2018</p>
+		</div>
+	</div>
+
+</div>
+
+<!-- End ai2html - 2021-06-28 20:38 -->
+
+
+
+
+
+        </div>
+        </div>
+    </div>
+
+    <div class="story-body">
+        <p class="body-text serif">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+ 
+    </div>
+      
+  </body>
+</html>
